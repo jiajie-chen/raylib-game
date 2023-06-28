@@ -1,6 +1,7 @@
 build
 docs
 *.code-workspace
+.cache
 
 CMakeLists.txt.user
 CMakeCache.txt

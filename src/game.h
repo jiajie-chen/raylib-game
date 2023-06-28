@@ -1,13 +1,12 @@
-#ifndef COLLAPSE_RL_GAME_H_
-#define COLLAPSE_RL_GAME_H_
-
-#include <memory>
+#ifndef RAYLIB_ROGUELIKE_GAME_H_
+#define RAYLIB_ROGUELIKE_GAME_H_
 
 #include <flecs.h>
+
+#include <memory>
 #include <raylib-cpp.hpp>
 
-namespace collapse_rl
-{
+namespace raylib_roguelike {
 
 struct RenderableText {
   raylib::Color text_color_;
@@ -17,17 +16,16 @@ struct RenderableText {
   int font_;
 };
 
-class Game
-{
-private:
+class Game {
+ private:
   std::unique_ptr<raylib::Window> window_;
   std::unique_ptr<flecs::world> world_;
-public:
+
+ public:
   Game(int screen_width, int screen_height);
-  ~Game() = default;
   void StartGameLoop(int fps);
 };
 
-} // namespace collapse_rl
+}  // namespace raylib_roguelike
 
-#endif // COLLAPSE_RL_GAME_H_
+#endif  // RAYLIB_ROGUELIKE_GAME_H_
